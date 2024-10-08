@@ -144,7 +144,7 @@ jQuery(document).ready(function() {
                     });
                 },
                 error: function(xhr, status, error) {
-                    console.error(error); // Tampilkan kesalahan jika ada
+                    console.error(error);
 
                     swal.fire({
                         title: "Error",
