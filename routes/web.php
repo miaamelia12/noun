@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomeCtrl;
+use App\Http\Controllers\ProductCtrl;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [HomeCtrl::class, 'index'])->name('app');
+
+Route::group(['prefix' => 'products'], function() {
+    Route::get('/', [ProductCtrl::class,'index']);
+    Route::get('dt', [ProductCtrl::class, 'dt']);
+    Route::get('create', [ProductCtrl::class, 'create']);
+    Route::post('save', [ProductCtrl::class, 'store']);
 });
