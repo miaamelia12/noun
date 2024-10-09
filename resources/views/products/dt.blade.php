@@ -20,9 +20,6 @@
     .width-200{
         width:150px;
     }
-    .dataTables_scroll {
-        overflow: auto;
-    }
     .button-container{
         display: flex;
         justify-content: flex-end;
@@ -50,7 +47,7 @@
         <div class="tab-content">
             <!--begin::Table-->
             <div class="table-responsive">
-                <table class="table table-bordered dataTable no-footer dataTables_scroll" id="datatable">
+                <table class="table table-bordered dataTable no-footer" id="datatable">
                     <thead class="thead-light">
                         <tr>
                             <th class="text-center">Name</th>
@@ -76,31 +73,31 @@
 @endsection
 
 @section('contentjs')
-
 <script type="text/javascript">
 jQuery(document).ready(function() {
     // init plugins
     var oTable = $('#datatable').DataTable({
         processing      : true,
         serverSide      : true,
-        lengthChange    : false,
         responsive      : true,
-        scrollY         : 500,
-        ajax            : {
-            url: '{{ url("products/dt") }}'
+        scrollX         : false,
+        ajax: {
+            url: '{{ url("products/dt") }}',
+            type: 'GET',
+            dataSrc: 'data'
         },
-        columns         : [
-            { data: 'name', name: 'name'},
-            { data: 'description', name: 'description'},
-            { data: 'price', name: 'price'},
-            { data: 'qty', name: 'qty'},
+        columns: [
+            { data: 'name' },
+            { data: 'description' },
+            { data: 'price' },
+            { data: 'qty' }
         ],
         columnDefs: [
             {
-                render: function (data, type, full, meta) {
+                render: function(data, type, full, meta) {
                     return "<div class='text-wrap'>" + data + "</div>";
                 },
-                targets: [ 0,1,2,3,4 ]
+                targets: [0, 1, 2, 3]
             }
         ],
         sDom            : 'ltipr',
@@ -110,7 +107,6 @@ jQuery(document).ready(function() {
             $('a[data-toggle="tooltip"]', this.api().table().container()).tooltip({ container : 'body' });
         }
     });
-    oTable = $('#datatable').DataTable();
 });
 </script>
 @endsection

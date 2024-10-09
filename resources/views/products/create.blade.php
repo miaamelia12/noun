@@ -90,12 +90,6 @@
 
 @section('contentjs')
 <script type="text/javascript">
-$.ajaxSetup({
-    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
-});
-
 jQuery(document).ready(function() {
     // init val after plugins
     @if(isset($data))

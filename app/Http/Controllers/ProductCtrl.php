@@ -17,8 +17,7 @@ class ProductCtrl extends Controller
 
     public function dt()
     {
-        return DataTables::of(Product::query())
-            ->make(true);
+        return DataTables::of(Product::query())->make(true);
     }
 
     public function create()

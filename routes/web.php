@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', [HomeCtrl::class, 'index'])->name('app');
+Route::get('/', [ProductCtrl::class, 'index'])->name('app');
 
 Route::group(['prefix' => 'products'], function() {
     Route::get('/', [ProductCtrl::class,'index']);

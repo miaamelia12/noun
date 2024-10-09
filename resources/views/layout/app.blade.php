@@ -18,8 +18,8 @@
 		<link href="{{ url('bootstrap/assets/css/themes/layout/header/menu/light.css') }}" rel="stylesheet" type="text/css" />
 		<link href="{{ url('bootstrap/assets/css/themes/layout/brand/dark.css') }}" rel="stylesheet" type="text/css" />
 		<link href="{{ url('bootstrap/assets/css/themes/layout/aside/dark.css') }}" rel="stylesheet" type="text/css" />
-		<link href="{{ url('bootstrap/assets/plugins/custom/datatables/datatables.bundle.css') }}" rel="stylesheet" type="text/css" />
-		<link href="{{ url('bootstrap/vendor/plugins/duallistbox/bootstrap-duallistbox.css') }}" rel="stylesheet" type="text/css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
 
 		<!--end::Layout Themes-->
 		@yield('addcss')
@@ -142,29 +142,6 @@
 						<!--end::Toolbar-->
 					</div>
 					<!--end::Brand-->
-					<!--begin::Aside Menu-->
-					<div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper">
-                        <!--begin::Menu Container-->
-                        <div id="kt_aside_menu" class="aside-menu my-4" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
-                            <!--begin::Menu Nav-->
-                            <ul class="menu-nav">
-                                <li class="menu-section">
-                                    <h4 class="menu-text">MENU</h4>
-                                    <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
-                                </li>
-                                <li class="menu-item" aria-haspopup="true">
-                                    <a href="/products" class="menu-link">
-                                        <span class="svg-icon menu-icon"><i class="flaticon-business mr-5"></i></span>
-                                        <span class="menu-text">Products</span>
-                                    </a>
-                                </li>
-                                <!-- Tambahkan menu item lainnya sesuai kebutuhan -->
-                            </ul>
-                            <!--end::Menu Nav-->
-                        </div>
-                        <!--end::Menu Container-->
-                    </div>
-					<!--end::Aside Menu-->
 				</div>
 				<!--end::Aside-->
 				<!--begin::Wrapper-->
@@ -245,15 +222,11 @@
 		<script src="{{ url('bootstrap/assets/plugins/custom/prismjs/prismjs.bundle.js') }}"></script>
 		<script src="{{ url('bootstrap/assets/js/scripts.bundle.js') }}"></script>
 		<script src="{{ url('bootstrap/vendor/jquery/jquery_ui/jquery-ui.min.js') }}"></script>
-		<script src="{{ url('bootstrap/vendor/plugins/datepicker/js/bootstrap-datetimepicker.min.js') }}"></script>
-		<script src="{{ url('bootstrap/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js') }}"></script>
-		<script src="{{ url('bootstrap/assets/js/pages/widgets.js') }}"></script>
-		<script src="{{ url('bootstrap/assets/js/pages/features/charts/apexcharts.js') }}"></script>
-		<script src="{{ url('bootstrap/assets/plugins/custom/datatables/datatables.bundle.js') }}"></script>
-		<script src="{{ url('bootstrap/vendor/plugins/autonumeric/autoNumeric.min.js') }}"></script>
-		<script src="{{ url('bootstrap/vendor/plugins/duallistbox/jquery.bootstrap-duallistbox.min.js') }}"></script>
-		<script src="{{ url('bootstrap/assets/plugins/custom/ckeditor/ckeditor-inline.bundle.js') }}"></script>
-		<script src="{{ url('bootstrap/assets/js/pages/features/charts/apexcharts.js') }}"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+		<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/jquery.inputmask.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 		@yield('addjs')
 		<script type="text/javascript">
 
